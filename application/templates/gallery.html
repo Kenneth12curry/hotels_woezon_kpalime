@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="image/favicon.png" type="image/png">
+        <title>Royal Hotel</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendors/linericon/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendors/nice-select/css/nice-select.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendors/owl-carousel/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendors/lightbox/simpleLightbox.css') }}">
+        <!-- main css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    </head>
+    <body>
+        <!--================Header Area =================-->
+        {% include 'shared/nav.html' %}
+        <!--================Header Area =================-->
+        
+        <!--================Breadcrumb Area =================-->
+        <section class="breadcrumb_area">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
+            <div class="container">
+                <div class="page-cover text-center">
+                    <h2 class="page-cover-tittle">Galerie</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="{{ url_for('hello_world') }}">Home</a></li>
+                        <li class="active">Gallery</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <!--================Breadcrumb Area =================-->
+        
+        <!--================Breadcrumb Area =================-->
+        <section class="gallery_area section_gap">
+            <div class="container">
+                <div class="section_title text-center">
+                    <h2 class="title_color">Hotel Woezon Galerie</h2>
+                    <p>Découvrez l'art du séjour raffiné dans notre galerie d'espaces uniques.</p>
+                </div>
+                <div class="row imageGallery1" id="gallery">
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="{{ url_for('static', filename='images/gallery/image_hotel.jpeg') }}" alt="">
+                            <div class="hover">
+                            	<a class="light" href="{{ url_for('static', filename='images/gallery/image_hotel.jpeg') }}"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="{{ url_for('static', filename='images/gallery/image1.jpeg') }}" alt="">
+                            <div class="hover">
+                            	<a class="light" href="{{ url_for('static', filename='images/gallery/image1.jpeg') }}"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="{{ url_for('static', filename='images/gallery/image2.jpeg') }}" alt="">
+                            <div class="hover">
+                            	<a class="light" href="{{ url_for('static', filename='images/gallery/image2.jpeg') }}"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="{{ url_for('static', filename='images/gallery/image3.jpeg') }}" alt="">
+                            <div class="hover">
+                            	<a class="light" href="{{ url_for('static', filename='images/gallery/image3.jpeg') }}"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="{{ url_for('static', filename='images/gallery/image5.jpeg') }}" alt="">
+                            <div class="hover">
+                            	<a class="light" href="{{ url_for('static', filename='images/gallery/image4.jpeg') }}"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="{{ url_for('static', filename='images/gallery/image_c2.jpeg') }}" alt="">
+                            <div class="hover">
+                            	<a class="light" href="{{ url_for('static', filename='images/gallery/image_c2.jpeg') }}"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="{{ url_for('static', filename='images/gallery/image7.jpeg') }}" alt="">
+                            <div class="hover">
+                            	<a class="light" href="{{ url_for('static', filename='images/gallery/image7.jpeg') }}"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="{{ url_for('static', filename='images/gallery/image8.jpeg') }}" alt="">
+                            <div class="hover">
+                            	<a class="light" href="{{ url_for('static', filename='images/gallery/image8.jpeg') }}"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="{{ url_for('static', filename='images/gallery/image10.jpeg') }}" alt="">
+                            <div class="hover">
+                            	<a class="light" href="{{ url_for('static', filename='images/gallery/image10.jpeg') }}"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================Breadcrumb Area =================-->
+        
+        <!--================ start footer Area  =================-->	
+        {% include 'shared/footer.html' %}
+		<!--================ End footer Area  =================-->
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popper.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/owl-carousel/owl.carousel.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/nice-select/js/jquery.nice-select.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/stellar.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/isotope/isotope-min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/stellar.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/lightbox/simpleLightbox.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+    </body>
+</html>
