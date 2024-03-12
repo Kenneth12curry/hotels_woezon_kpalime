@@ -1,1 +1,1 @@
-# application réalisé avec flask #
+# application web réalisé avec le micro-framework flask (python) #
