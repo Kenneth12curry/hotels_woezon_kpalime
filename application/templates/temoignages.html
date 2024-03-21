@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Woezon</title>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='vendors/linericon/style.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='vendors/nice-select/css/nice-select.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='vendors/owl-carousel/owl.carousel.min.css') }}">
+     <!-- main css -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body>
+     <!--================Header Area =================-->
+     {% include 'shared/nav.html' %}
+     <!--================Header Area =================-->
+     
+     <!--================Breadcrumb Area =================-->
+     <section class="breadcrumb_area">
+         <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
+         <div class="container">
+             <div class="page-cover text-center">
+                 <h2 class="page-cover-tittle">Contact Us</h2>
+                 <ol class="breadcrumb">
+                     <li><a href="index.html">Home</a></li>
+                     <li class="active">Contact Us</li>
+                 </ol>
+             </div>
+         </div>
+     </section>
+     <!--================Breadcrumb Area =================-->
+     
+     <!--================Contact Area =================-->
+     <section class="contact_area section_gap">
+         <div class="container">
+            <h5 class="text-center">Votre avis nous intéresse, n'hésitez pas nous serons à l'écoute de vos suggestions !</h5>
+             <div class="row mt-5 d-flex justify-content-center">
+                 <div class="col-md-9 shadow bg-light">
+                     <form class="row contact_form mt-3" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                         <div class="col-md-6">
+                             <div class="form-group">
+                                 <input type="text" class="form-control" id="name" name="name" placeholder="Entrer votre nom complet">
+                             </div>
+                             {# <div class="form-group">
+                                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+                             </div> #}
+                             <div class="form-group">
+                                 <input type="text" class="form-control" id="subject" name="subject" placeholder="Donner une note sur 10">
+                             </div>
+                         </div>
+                         <div class="col-md-6">
+                             <div class="form-group">
+                                 <textarea class="form-control" name="message" id="message" rows="1" placeholder="Entre votre mesaage"></textarea>
+                             </div>
+                         </div>
+                         <div class="col-md-12 text-right">
+                             <button type="submit" value="submit" class="btn theme_btn button_hover mb-4">Send Message</button>
+                         </div>
+                     </form>
+                 </div>
+             </div>
+         </div>
+     </section>
+     <!--================Contact Area =================-->
+     
+     <!--================ start footer Area  =================-->	
+     {% include 'shared/footer.html' %}
+     <!--================ End footer Area  =================-->
+    
+    
+    <!--================Contact Success and Error message Area =================-->
+     <div id="success" class="modal modal-message fade" role="dialog">
+         <div class="modal-dialog">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <i class="fa fa-close"></i>
+                     </button>
+                     <h2>Thank you</h2>
+                     <p>Your message is successfully sent...</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <!-- Modals error -->
+
+     <div id="error" class="modal modal-message fade" role="dialog">
+         <div class="modal-dialog">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <i class="fa fa-close"></i>
+                     </button>
+                     <h2>Sorry !</h2>
+                     <p> Something went wrong </p>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!--================End Contact Success and Error message Area =================-->
+     
+     
+     <!-- Optional JavaScript -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/popper.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='vendors/owl-carousel/owl.carousel.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='vendors/nice-select/js/jquery.nice-select.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/stellar.js') }}"></script>
+     <script src="{{ url_for('static', filename='vendors/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='vendors/isotope/isotope-min.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/stellar.js') }}"></script>
+     <script src="{{ url_for('static', filename='vendors/lightbox/simpleLightbox.min.js') }}"></script>
+     <!--gmaps Js-->
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+     <script src="{{ url_for('static', filename='js/gmaps.min.js') }}"></script>
+     <!-- contact js -->
+     <script src="{{ url_for('static', filename='js/jquery.form.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/jquery.validate.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+ </body>
+</body>
+</html>

@@ -329,12 +329,13 @@ button:focus {
 }
 
 .navbar {
-  background: #fff;
+  background: #ffff;
   padding: 0px 25px;
 }
 
 .navbar .logo_h {
   padding-top: 0px;
+  
 }
 
 .navbar .menu_nav .nav-item .nav-link {

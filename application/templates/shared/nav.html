@@ -2,7 +2,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html"><!--img src="{{ url_for('static', filename='image/Logo.png') }}" alt=""--><h5 class="mt-3">HOTEL WOEZON KPALIMÉ</h5></a>
+            <a class="navbar-brand logo_h" href="{{ url_for('hello_world') }}"><!--img src="{{ url_for('static', filename='image/Logo.png') }}" alt=""--><h5 class="mt-3">HOTEL WOEZON KPALIMÉ</h5></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -13,17 +13,19 @@
                 <ul class="nav navbar-nav menu_nav ml-auto">
                     <li class="nav-item {% if request.path == url_for('hello_world') %}active{% endif %}"><a class="nav-link" href="{{url_for('hello_world')}}">Home</a></li> 
                     <li class="nav-item {% if request.path == url_for('about_us') %}active{% endif %}"><a class="nav-link" href="{{url_for('about_us')}}">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="accomodation.html">Accomodation</a></li>
+                   {#  <li class="nav-item"><a class="nav-link" href="accomodation.html">Accomodation</a></li> #}
                     <li class="nav-item  {% if request.path == url_for('page') %}active{% endif %}"><a class="nav-link" href="{{ url_for('page')}}">Gallery</a></li>
-                    <li class="nav-item submenu dropdown">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('page_temoignages') }}">Temoignages</a></li> 
+                    {# <li class="nav-item submenu dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
                         </ul>
-                    </li> 
-                    <li class="nav-item"><a class="nav-link" href="elements.html">Elemests</a></li>
+                    </li>  #}
+                    <!--li class="nav-item"><a class="nav-link" href="elements.html">Elemests</a></li-->
                     <li class="nav-item {% if request.path == url_for('contact') %}active{% endif %}"><a class="nav-link" href="{{ url_for('contact')}}">Contact</a></li>
+                    <li class="nav-item {% if request.path == url_for('connexion') %}active{% endif %}"><a class="nav-link" href="{{ url_for('connexion') }}">Connexion</a></li>
                 </ul>
             </div> 
         </nav>
